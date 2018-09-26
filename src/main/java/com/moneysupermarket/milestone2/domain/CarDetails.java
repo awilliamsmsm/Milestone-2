@@ -45,15 +45,4 @@ public class CarDetails{
         this.engSize = engSize;
     }
 
-
-//    public String getCar(){
-//        String carDet = getCarReg() + ",\n" + getCarMake() + " " + getCarModel() + " " + getEngSize();
-//        return carDet;
-//    }
-
-//    public String toString(){
-//        String carDet = getCarReg() + ",\n" + getCarMake() + " " + getCarModel() + " " + getEngSize();
-//        return carDet;
-//    }
-
 }

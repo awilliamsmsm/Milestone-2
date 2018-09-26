@@ -5,24 +5,20 @@ import com.moneysupermarket.milestone2.domain.CarDetails;
 import com.moneysupermarket.milestone2.domain.User;
 
 public class ProfileBuilder {
-    public User build(String profLine) {//, Integer profNum){
+    public User build(String profLine) {
         String splitVal = ",";
         String line = profLine;
-        //Integer num = profNum;
         String[] prof = line.split(splitVal);
         int topIndex = 10;
         int size = prof.length;
         if (size > topIndex) {
-//            Address add = buildAddress(prof);
-//            CarDetails car = buildCar(prof);
             User user = buildUser(prof);
             return user;
         } else {
             System.out.println("Input is missing data");
             return null;
         }
-        //com.moneysupermarket.milestone2.PrintToFile.printToFile(user, num);
-        //return user;
+
     }
 
     private User buildUser(String[] data){

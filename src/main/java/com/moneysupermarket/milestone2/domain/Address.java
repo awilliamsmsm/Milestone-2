@@ -57,13 +57,4 @@ public class Address{
         this.postCode = postCode;
     }
 
-//    public String getAddress(){
-//        String add = Integer.toString(getHouseNumber()) + " " + getStreet() + ",\n" + getTown() + ",\n" + getCity() + ",\n" + getPostCode();
-//        return add;
-//    }
-
-//    public String toString(){
-//        String add = Integer.toString(getHouseNumber()) + " " + getStreet() + ",\n" + getTown() + ",\n" + getCity() + ",\n" + getPostCode();
-//        return add;
-//    }
 }

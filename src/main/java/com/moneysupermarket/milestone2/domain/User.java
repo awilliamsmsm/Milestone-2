@@ -46,8 +46,4 @@ public class User{
         this.car = car;
     }
 
-//    public String toString() {
-//        String add = getFirstName() + " " + getLastName() + "\n\n" + getAddress() + "\n\n" + getCar();
-//        return add;
-//    }
 }
