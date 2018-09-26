@@ -21,9 +21,5 @@ public class ReadDB {
         for (BasicDBObject profile :   profiles){
             System.out.println(profile);
         }
-
-
-
-
     }
 }
