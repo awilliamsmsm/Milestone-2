@@ -12,13 +12,17 @@ public class ReadCSV {
         String file = filePath;
         String line;
         ProfileBuilder profileBuilder = new ProfileBuilder();
+
+//        String dbName = "myMongoDb";
+//        String dbCollection = "profiles";
+//        MongoCollection collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
         int i = 1;
         try{
             BufferedReader br = new BufferedReader(new FileReader(file));
             br.readLine();
             while((line = br.readLine()) != null){
                 User user = profileBuilder.build(line);
-                PrintToFile.printToFile(user);//, i);
+                CSVToUserList.addToList(user);//, i);
                 i++;
             }
         }
