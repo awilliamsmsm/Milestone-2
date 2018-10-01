@@ -12,7 +12,7 @@ public class MongoWriter {
 
     public static void writeDocumentsToMongo(ArrayList<User> userList, MongoCollection<BasicDBObject> collection){
         //String dbName = "myMongoDb";
-        //String dbCollection = "profiles";
+        String dbCollection = "profiles";
         //MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection); //return collection
         int i = 1;
         for (User user : userList) {

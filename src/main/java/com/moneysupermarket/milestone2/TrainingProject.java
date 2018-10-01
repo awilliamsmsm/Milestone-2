@@ -1,13 +1,6 @@
 package com.moneysupermarket.milestone2;
 
-import com.moneysupermarket.milestone2.Mongo.ConnectMongoDB;
-import com.moneysupermarket.milestone2.Mongo.MongoWriter;
 import com.moneysupermarket.milestone2.Mongo.ReadDB;
-import com.moneysupermarket.milestone2.domain.User;
-import com.mongodb.BasicDBObject;
-import com.mongodb.client.MongoCollection;
-
-import java.util.ArrayList;
 
 public class TrainingProject {
     public final static String BASE_PATH = "/Users/alistair.williams/Documents/";
@@ -25,11 +18,10 @@ public class TrainingProject {
 //        MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
 //        MongoWriter.writeDocumentsToMongo(users, collection);
         ReadDB db = new ReadDB();
-        db.readInProfiles(dbName, dbCollection);
-
-
-
-
+        //db.readAllProfiles(dbName, dbCollection);
+        db.postCodeSearch(dbName, dbCollection, "79");
+        //db.readLastProfiles(dbName, dbCollection);
+        //db.carModelSearch(dbName, dbCollection, "BMW");
     }
 }
 
