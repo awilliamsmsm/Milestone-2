@@ -19,6 +19,15 @@ public class ConnectMongoDB {
         return collection;
 
     }
+
+//    public static MongoCollection<BasicDBObject> connectMongoDBAddress(String dbName, String dbCollection) {
+//        String name = dbName;
+//        String collectionName = dbCollection + ".address";
+//        MongoClient mongoClient = new MongoClient("localhost", 27017);
+//        MongoDatabase database = mongoClient.getDatabase(name);
+//        MongoCollection collection = database.getCollection(collectionName, BasicDBObject.class);
+//        return collection;
+//    }
 //
 //    public static MongoDatabase getMongoDB(String dbName, String dbCollection){
 //        String name = dbName;
