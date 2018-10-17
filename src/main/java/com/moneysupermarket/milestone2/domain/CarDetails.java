@@ -6,11 +6,11 @@ public class CarDetails{
     private String carModel;
     private Double engSize;
 
-    public CarDetails(String reg, String make, String model, Double size){
-        setCarReg(reg);
+    public CarDetails(String regNumber, String make, String model, Double sizeOfEngine){
+        setCarReg(regNumber);
         setCarMake(make);
         setCarModel(model);
-        setEngSize(size);
+        setEngSize(sizeOfEngine);
     }
 
     public String getCarReg() {

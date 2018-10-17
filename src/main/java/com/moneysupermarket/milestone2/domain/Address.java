@@ -8,12 +8,12 @@ public class Address{
     private String city;
     private String postCode;
 
-    public Address(String hNum, String strt, String twn, String cty, String pCode){
-        setHouseNumber(hNum);
-        setStreet(strt);
-        setTown(twn);
-        setCity(cty);
-        setPostCode(pCode);
+    public Address(String houseNum, String streetName, String townName, String cityName, String postCode){
+        setHouseNumber(houseNum);
+        setStreet(streetName);
+        setTown(townName);
+        setCity(cityName);
+        setPostCode(postCode);
 
     }
 

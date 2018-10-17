@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24e84f32-5f81-484d-805e-76904252b4fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/WriteAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProjectReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/moneysupermarket/milestone2/Mongo/ReadDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyAppReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/handleCSV/ReadCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/CSVToUserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/handleCSV/CSVToUserList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ConnectMongoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ConnectMongoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/MongoWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/MongoWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ReadCSV.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProjectReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProjectReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/CarDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/CarDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -82,26 +89,30 @@
     <session id="-421565591">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
+          <entry key="csv" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="5" />
-          <entry key="java" value="21" />
+          <entry key="java" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="Groovy" value="5" />
-          <entry key="JAVA" value="21" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="48" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -109,14 +120,14 @@
           <entry key="dummy" value="7" />
           <entry key="gitignore" value="22" />
           <entry key="gradle" value="63" />
-          <entry key="java" value="8332" />
+          <entry key="java" value="11423" />
           <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="63" />
-          <entry key="JAVA" value="8332" />
+          <entry key="JAVA" value="11423" />
           <entry key="PLAIN_TEXT" value="60" />
         </counts>
       </usages-collector>
@@ -127,8 +138,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+            <state relative-caret-position="165">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyAppReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,50 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProjectReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/moneysupermarket/milestone2/Mongo/ReadDBTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ProfileBuilderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -190,50 +189,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ConnectMongoDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/WriteAddress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/MongoWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/CSVToUserList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="3" selection-start-line="2" selection-end-line="2" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#262#263#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,8 +206,8 @@
         <option value="ColdFusion File" />
         <option value="package.json" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -557,11 +516,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/trainPro.java" />
-        <option value="$PROJECT_DIR$/src/main/JSONObject.java.cfm" />
-        <option value="$PROJECT_DIR$/src/main/java/package.json" />
-        <option value="$PROJECT_DIR$/src/main/java/org.json" />
         <option value="$PROJECT_DIR$/src/main/java/org/json/package.json" />
         <option value="$PROJECT_DIR$/src/main/java/org/json/JSONObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/profile.java" />
@@ -590,23 +544,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/UserList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/CSVToUSerList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/PrintToFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/CSVToUserList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/PrintToDB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ReadCSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ProfileBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/readDB.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/test/java/com/moneysupermarket/milestone2/Mongo/ReadDBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/CSVToUserList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ReadCSV.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/handleCSV/ReadCSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/Address.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/CarDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/readDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/handleCSV/CSVToUserList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/MongoWriter.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ConnectMongoDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/WriteAddress.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/moneysupermarket/milestone2/Mongo/ReadDBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/myAppReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/MyAppReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProjectReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ConnectMongoDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyAppReader.java" />
       </list>
     </option>
   </component>
@@ -632,9 +592,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -685,6 +645,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="milestone2" type="462c0819:PsiDirectoryNode" />
+              <item name="AppRunners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training-projectM2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="milestone2" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -694,27 +663,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="milestone2" type="462c0819:PsiDirectoryNode" />
-              <item name="Mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="handleCSV" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="training-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="training-projectM2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="training-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="training-projectM2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="training-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="training-projectM2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="milestone2" type="462c0819:PsiDirectoryNode" />
               <item name="Mongo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -730,12 +687,12 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538644091776" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539790881995" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15498519" />
     <property name="project.structure.side.proportion" value="0.43808413" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -752,6 +709,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/CSV" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -770,6 +730,7 @@
     <configuration name="TrainingProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.moneysupermarket.milestone2.TrainingProject" />
       <module name="training-project_main" />
+      <option name="PROGRAM_PARAMETERS" value="userProfilesDB profilesTest2 userProfilesCSV.csv" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -777,9 +738,10 @@
     <configuration name="TrainingProjectReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.moneysupermarket.milestone2.TrainingProjectReader" />
       <module name="training-project_main" />
+      <option name="PROGRAM_PARAMETERS" value="myMongoDb profiles PostCodeFilter 79" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.moneysupermarket.milestone2.*" />
+          <option name="PATTERN" value="com.moneysupermarket.milestone2.handleCSV.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -864,10 +826,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.TrainingProject" />
+      <item itemvalue="Application.TrainingProjectReader" />
       <item itemvalue="JUnit.ProfileBuilderTest.testProfileBuilder" />
       <item itemvalue="JUnit.ProfileTest2" />
       <item itemvalue="JUnit.ProfileBuilderTest.testMissingData" />
-      <item itemvalue="Application.TrainingProjectReader" />
     </list>
     <recent_temporary>
       <list>
@@ -893,7 +855,11 @@
       <workItem from="1536757956051" duration="2856000" />
       <workItem from="1536761134155" duration="53963000" />
       <workItem from="1537522304800" duration="20310000" />
-      <workItem from="1537949364091" duration="65595000" />
+      <workItem from="1537949364091" duration="67952000" />
+      <workItem from="1539251062797" duration="596000" />
+      <workItem from="1539252899181" duration="598000" />
+      <workItem from="1539265838549" duration="26000" />
+      <workItem from="1539677290501" duration="24589000" />
     </task>
     <task id="LOCAL-00001" summary="Output profiles to console">
       <created>1537977730418</created>
@@ -938,7 +904,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155789000" />
+    <option name="totallyTimeSpent" value="183955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -949,17 +915,17 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24387646" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25346112" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5005325" side_tool="true" weight="0.38141593" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49946752" visible="true" weight="0.34955752" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49946752" weight="0.34955752" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.28495574" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="5" weight="0.32883435" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.30530974" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.30530974" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -981,25 +947,25 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24387646" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2539936" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.38141593" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5005325" side_tool="true" weight="0.38141593" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49946752" weight="0.34955752" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.28495574" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="5" weight="0.32883435" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.30530974" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.30530974" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="1" visible="true" weight="0.11661342" />
+      <window_info anchor="right" id="Maven Projects" order="1" weight="0.11661342" />
       <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette" order="6" />
@@ -1045,50 +1011,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/re.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/PrintToDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ProfileBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/CarDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ReadCSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/PrintToDB.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.5.0/mongodb-driver-3.5.0.jar!/com/mongodb/BasicDBObject.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1103,54 +1026,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/Address.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/MongoWriter.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/CSVToUserList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" selection-start-line="2" selection-end-line="2" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/WriteAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="955">
+          <caret line="3783" column="33" selection-start-line="3783" selection-start-column="33" selection-end-line="3783" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1161,10 +1047,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ProfileBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/ProfileBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CSV/userProfilesCSV.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="98" lean-forward="true" selection-start-line="18" selection-start-column="98" selection-end-line="18" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/CarDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/handleCSV/ReadCSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="56" lean-forward="true" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/handleCSV/CSVToUserList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/domain/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/MongoWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/WriteAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1173,18 +1134,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ConnectMongoDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="210">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ProfileBuilderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+        <state relative-caret-position="165">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyAppReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/Mongo/ReadDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1193,15 +1168,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/TrainingProjectReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moneysupermarket/milestone2/AppRunners/MyApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="300">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1258,7 +1236,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>training-project_test|training-project</last-edited>
+          <last-edited>training-project_main|training-project</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

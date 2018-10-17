@@ -1,19 +1,20 @@
 package com.moneysupermarket.milestone2;
 
-import com.moneysupermarket.milestone2.Mongo.ReadDB;
+import com.moneysupermarket.milestone2.AppRunners.MyAppReader;
 
 public class TrainingProjectReader {
 
     public static void main(String[] args) {
+        int argsLength = args.length;
 
-        String dbName = "myMongoDb";
-        String dbCollection = "profiles";
-        int numberDisplayed = 10;
-        ReadDB db = new ReadDB();
-        db.readAllProfiles(dbName, dbCollection);
-        //db.readLastProfiles(dbName, dbCollection, numberDisplayed);
-        //db.carModelSearch(dbName, dbCollection, "BMW");
-        //db.postCodeSearch(dbName, dbCollection, "79");
-        //db.copyAddress(dbName, dbCollection);
+        switch(argsLength){
+            case 3:     MyAppReader.runAppReader(args[0], args[1], args[2]);
+                        break;
+            case 4:     MyAppReader.runAppReader(args[0], args[1], args[2], args[3]);
+                        break;
+            default:    System.out.println("Invalid number of arguments");
+                        break;
+        }
+
     }
 }

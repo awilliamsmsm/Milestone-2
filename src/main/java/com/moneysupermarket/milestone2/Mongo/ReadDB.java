@@ -1,21 +1,14 @@
 package com.moneysupermarket.milestone2.Mongo;
 
-import com.moneysupermarket.milestone2.CSVToUserList;
-import com.moneysupermarket.milestone2.domain.User;
-import com.mongodb.*;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.BasicDBObject;
-import org.bson.Document;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ReadDB {
 
-    public void readAllProfiles(String dbName, String dbCollection){
+    public static void readAllProfiles(String dbName, String dbCollection){
         MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
         FindIterable<BasicDBObject> profiles = collection.find();
 
@@ -25,7 +18,7 @@ public class ReadDB {
 
     }
 
-    public void readLastProfiles(String dbName, String dbCollection, int lastNumber){
+    public static void readLastProfiles(String dbName, String dbCollection, int lastNumber){
         MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
         FindIterable<BasicDBObject> profiles = collection.find().sort(new BasicDBObject("_id", -1)).limit(10);
         System.out.println((profiles));
@@ -35,7 +28,7 @@ public class ReadDB {
         }
     }
 
-    public void carModelSearch(String dbName, String dbCollection, String carMake){
+    public static void carModelSearch(String dbName, String dbCollection, String carMake){
         MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
         BasicDBObject query = new BasicDBObject();
         query.put("car.make", carMake);
@@ -46,7 +39,7 @@ public class ReadDB {
         }
     }
 
-    public void postCodeSearch(String dbName, String dbCollection, String postCode){
+    public static void postCodeSearch(String dbName, String dbCollection, String postCode){
         String postCodeRegex= "^" + postCode + ".*";
         MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
         BasicDBObject query = new BasicDBObject();
@@ -59,7 +52,7 @@ public class ReadDB {
 
     }
 
-    public void copyAddress(String dbName, String dbCollection){
+    public static void copyAddress(String dbName, String dbCollection){
         MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection);
         FindIterable<BasicDBObject> profiles = collection.find();
         ArrayList<BasicDBObject> addresses = new ArrayList<>();

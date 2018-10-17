@@ -7,9 +7,9 @@ public class User{
     private Address address;
     private CarDetails car;
 
-    public User(String fName, String lName, Address address, CarDetails car){
-        setFirstName(fName);
-        setLastName(lName);
+    public User(String firstName, String lastName, Address address, CarDetails car){
+        setFirstName(firstName);
+        setLastName(lastName);
         setAddress(address);
         setCar(car);
     }

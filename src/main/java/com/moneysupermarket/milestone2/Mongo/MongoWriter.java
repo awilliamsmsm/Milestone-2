@@ -11,17 +11,15 @@ import java.util.ArrayList;
 public class MongoWriter {
 
     public static void writeDocumentsToMongo(ArrayList<User> userList, MongoCollection<BasicDBObject> collection){
-        //String dbName = "myMongoDb";
-        String dbCollection = "profiles";
-        //MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollection); //return collection
-        int i = 1;
+        //String dbCollection = "profiles";
+        int profileCounter = 1;
         for (User user : userList) {
 
             BasicDBObject document = buildDocument(user);
 
             collection.insertOne(document);
-            System.out.println("Profile " + i +" added to database");
-            i++;
+            System.out.println("Profile " + profileCounter +" added to database");
+            profileCounter++;
         }
     }
 
@@ -31,35 +29,35 @@ public class MongoWriter {
         document.put("lastName", user.getLastName());
 
         Address address = user.getAddress();
-        BasicDBObject addr = buildAddressDocument(address);
-        document.put("address", addr);
+        BasicDBObject addressObject = buildAddressDocument(address);
+        document.put("address", addressObject);
 
         CarDetails car = user.getCar();
-        BasicDBObject carDetails = buildCarDocument(car);
-        document.put("car", carDetails);
+        BasicDBObject carObject = buildCarDocument(car);
+        document.put("car", carObject);
 
         return document;
     }
 
     private static BasicDBObject buildAddressDocument(Address address){
-        BasicDBObject addr = new BasicDBObject();
-        addr.put("houseNumber", address.getHouseNumber());
-        addr.put("street", address.getStreet());
-        addr.put("town", address.getTown());
-        addr.put("city", address.getCity());
-        addr.put("postCode", address.getPostCode());
+        BasicDBObject addressDocument = new BasicDBObject();
+        addressDocument.put("houseNumber", address.getHouseNumber());
+        addressDocument.put("street", address.getStreet());
+        addressDocument.put("town", address.getTown());
+        addressDocument.put("city", address.getCity());
+        addressDocument.put("postCode", address.getPostCode());
 
-        return addr;
+        return addressDocument;
     }
 
     private static BasicDBObject buildCarDocument(CarDetails car){
-        BasicDBObject carDetails = new BasicDBObject();
-        carDetails.put("make", car.getCarMake());
-        carDetails.put("model", car.getCarModel());
-        carDetails.put("carRegistration", car.getCarReg());
-        carDetails.put("engineSize", car.getEngSize());
+        BasicDBObject carDocument = new BasicDBObject();
+        carDocument.put("make", car.getCarMake());
+        carDocument.put("model", car.getCarModel());
+        carDocument.put("carRegistration", car.getCarReg());
+        carDocument.put("engineSize", car.getEngSize());
 
-        return carDetails;
+        return carDocument;
     }
 
 
