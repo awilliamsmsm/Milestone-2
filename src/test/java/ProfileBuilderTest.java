@@ -10,9 +10,6 @@ public class ProfileBuilderTest {
 
     @Test
     public void testProfileBuilder() {
-       //Arrange
-       //Make com.moneysupermarket.milestone2.domain.User object
-       //make a test String
         Address add = new Address("57", "Spring Gardens", "Manchester", "Manchester", "M2 2BY");
         CarDetails car = new CarDetails("MS68 MSM", "Audi", "R8", 5.2);
         User userTest = new User("Money", "Supermarket", add, car);
@@ -39,9 +36,6 @@ public class ProfileBuilderTest {
         assertEquals(userResult.getCar().getEngSize(), userTest.getCar().getEngSize());
 
         //assertEquals(userResult.getCar(), userTest.getCar());
-
-
-
 
     }
 

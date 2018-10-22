@@ -2,7 +2,7 @@ package com.moneysupermarket.milestone2;
 
 import com.moneysupermarket.milestone2.AppRunners.MyApp;
 
-public class TrainingProject {
+public class TrainingProjectWriter {
     public final static String BASE_PATH = "src/main/resources/CSV/";
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.moneysupermarket.learn;
+package com.moneysupermarket.milestone2.AppRunners;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.moneysupermarket.milestone2.Mongo.ConnectMongoDB;
