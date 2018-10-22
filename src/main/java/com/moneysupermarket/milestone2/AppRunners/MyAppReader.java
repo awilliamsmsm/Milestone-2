@@ -1,52 +1,76 @@
-package com.moneysupermarket.milestone2.AppRunners;
+package com.moneysupermarket.learn;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.moneysupermarket.milestone2.Mongo.ConnectMongoDB;
 import com.moneysupermarket.milestone2.Mongo.ReadDB;
+import com.moneysupermarket.milestone2.domain.User;
+
+//import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyAppReader {
+    private final static String missingFilterArgumentMessage = "Missing filter argument";
+    private final ReadDB readDB;
+    private final String dbName;
+    private final ObjectMapper objectMapper;
+    private List<User> userList = new ArrayList<>();
 
-    public static void runAppReader(String dbName, String dbCollection, String readType){
-        String missingFilterArgumentMessage = "Missing filter argument";
-        switch(readType){
-            case "ReadAll":         ReadDB.readAllProfiles(dbName, dbCollection);
-                                    break;
-
-            case "CopyAddresses":   ReadDB.copyAddress(dbName, dbCollection);
-                                    break;
-
-            case "LastX":           System.out.println(missingFilterArgumentMessage);
-                                    break;
-
-            case "CarMakeFilter":   System.out.println(missingFilterArgumentMessage);
-                                    break;
-
-            case "PostCodeFilter":  System.out.println(missingFilterArgumentMessage);
-                                    break;
-
-            default:                System.out.println(readType + " is not a valid argument");
-                                    break;
-       }
+    public MyAppReader(String dbName, String dbCollection) {
+        this.readDB = new ReadDB(ConnectMongoDB.connectMongoDB(dbName, dbCollection));
+        this.dbName = dbName;
+        this.objectMapper = new ObjectMapper();
     }
 
-    public static void runAppReader(String dbName, String dbCollection, String readType, String filterField){
-        switch(readType){
-            case "ReadAll":         ReadDB.readAllProfiles(dbName, dbCollection);
-                                    break;
+    public void runAppReader(String readType, String filterField)  throws Exception{
+        switch (readType) {
+            case "ReadAll":
+                userList = readDB.readAllProfiles();
+                printUsers(userList);
+                break;
 
-            case "CopyAddresses":   ReadDB.copyAddress(dbName, dbCollection);
-                                    break;
+            case "CopyAddresses":
+                readDB.copyAddress(dbName);
+                break;
 
-            case "LastX":           Integer numberOfProfilesDisplayed = Integer.parseInt(filterField);
-                                    ReadDB.readLastProfiles(dbName, dbCollection, numberOfProfilesDisplayed);
-                                    break;
+            case "LastX":
+            case "CarMakeFilter":
+            case "PostCodeFilter":
+                runAppReaderWithFilter(readType, filterField);
+                break;
 
-            case "CarMakeFilter":   ReadDB.carModelSearch(dbName, dbCollection, filterField);
-                                    break;
+            default:
+                System.out.println(readType + " is not a valid argument");
+                break;
+        }
+    }
 
-            case "PostCodeFilter":  ReadDB.postCodeSearch(dbName, dbCollection, filterField);
-                                    break;
+    private void runAppReaderWithFilter(String readType, String filterField) throws Exception {
+        if (filterField == null) {
+            System.out.println(missingFilterArgumentMessage);
+            return;
+        }
+        switch (readType) {
+            case "LastX":
+                Integer numberOfProfilesDisplayed = Integer.parseInt(filterField);
+                userList = readDB.readLastProfiles(numberOfProfilesDisplayed);
+                printUsers(userList);
+                break;
 
-            default:                System.out.println(readType + " is not a valid argument");
-                                    break;
-       }
+            case "CarMakeFilter":
+                userList = readDB.carModelSearch(filterField);
+                printUsers(userList);
+                break;
+
+            case "PostCodeFilter":
+                userList = readDB.postCodeSearch(filterField);
+                printUsers(userList);
+                break;
+        }
+    }
+
+    private void printUsers(List<User> users) throws Exception{
+        for (User user : users)
+            System.out.println(objectMapper.writeValueAsString(user));
     }
 }
