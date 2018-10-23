@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MongoWriter {
 
-    public static void writeDocumentsToMongo(ArrayList<User> userList, MongoCollection<BasicDBObject> collection){
+    public void writeDocumentsToMongo(ArrayList<User> userList, MongoCollection<BasicDBObject> collection){
         //String dbCollection = "profiles";
         int profileCounter = 1;
         for (User user : userList) {

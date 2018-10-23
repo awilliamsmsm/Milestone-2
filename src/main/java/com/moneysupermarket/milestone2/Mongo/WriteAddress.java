@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class WriteAddress {
 
     public static void writeAddressToDB(ArrayList<BasicDBObject> addresses, String dbName){
-        MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, "addresses");
+        ConnectMongoDB addressesToDB = new ConnectMongoDB();
+        MongoCollection<BasicDBObject> collection = addressesToDB.connectMongoDB(dbName, "addresses");
         collection.insertMany(addresses);
     }
 }

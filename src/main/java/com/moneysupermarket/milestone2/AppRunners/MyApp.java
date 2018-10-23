@@ -10,14 +10,20 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyApp {
     public void runApp(String dbName, String dbCollectionName, String fileName){
+        ReadCSV csvReader = new ReadCSV();
         String filePath = TrainingProjectWriter.BASE_PATH + fileName;
-        ReadCSV.readCSV(filePath);
+        List<String> userList = csvReader.readCSV(filePath);
 
-        ArrayList<User> users  = CSVToUserList.returnListOfUsers();
-        MongoCollection<BasicDBObject> collection = ConnectMongoDB.connectMongoDB(dbName, dbCollectionName);
-        MongoWriter.writeDocumentsToMongo(users, collection);
+        CSVToUserList convertToUser = new CSVToUserList();
+        ArrayList<User> users = convertToUser.stringToUser(userList);
+
+        ConnectMongoDB mongoConnection = new ConnectMongoDB();
+        MongoCollection<BasicDBObject> collection = mongoConnection.connectMongoDB(dbName, dbCollectionName);
+        MongoWriter writeUsersToDB = new MongoWriter();
+        writeUsersToDB.writeDocumentsToMongo(users, collection);
     }
 }

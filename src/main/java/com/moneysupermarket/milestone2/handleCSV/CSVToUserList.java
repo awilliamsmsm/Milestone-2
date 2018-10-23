@@ -14,17 +14,18 @@ public class CSVToUserList {
         userList.add(user);
     }
 
-    public static void stringToUser(List<String> stringUserList){
+    public ArrayList<User> stringToUser(List<String> userListString){
         ProfileBuilder profileBuilder = new ProfileBuilder();
-        for (String rawUserString : stringUserList){
+        for (String rawUserString : userListString){
             User user = profileBuilder.build(rawUserString);
             addToList(user);
         }
-    }
-
-    public static ArrayList<User> returnListOfUsers(){
         return userList;
     }
+
+//    public static ArrayList<User> returnListOfUsers(){
+//        return userList;
+//    }
 
 
 }

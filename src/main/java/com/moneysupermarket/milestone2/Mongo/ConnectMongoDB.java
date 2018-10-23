@@ -8,7 +8,7 @@ import com.mongodb.client.MongoDatabase;
 
 public class ConnectMongoDB {
 
-    public static MongoCollection connectMongoDB(String dbName, String dbCollection){
+    public MongoCollection connectMongoDB(String dbName, String dbCollection){
         String name = dbName;
         String collectionName = dbCollection;
         MongoClient mongoClient = new MongoClient("localhost", 27017);

@@ -17,7 +17,8 @@ public class MyAppReader {
     private List<User> userList = new ArrayList<>();
 
     public MyAppReader(String dbName, String dbCollection) {
-        this.readDB = new ReadDB(ConnectMongoDB.connectMongoDB(dbName, dbCollection));
+        ConnectMongoDB dbReader = new ConnectMongoDB();
+        this.readDB = new ReadDB(dbReader.connectMongoDB(dbName, dbCollection));
         this.dbName = dbName;
         this.objectMapper = new ObjectMapper();
     }

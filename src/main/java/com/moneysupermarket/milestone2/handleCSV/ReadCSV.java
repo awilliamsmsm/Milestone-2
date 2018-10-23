@@ -10,14 +10,16 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ReadCSV {
-    public static void readCSV(String filePath){
+    public List<String> readCSV(String filePath){
         String file = filePath;
         try (Stream<String> stream = Files.lines(Paths.get(file)).skip(1)){
             List<String> userLines = stream.collect(Collectors.toList());
-            CSVToUserList.stringToUser(userLines);
+            //CSVToUserList.stringToUser(userLines);
+            return userLines;
         }
         catch(IOException e){
             e.printStackTrace();
+            return null;
         }
 
     }
