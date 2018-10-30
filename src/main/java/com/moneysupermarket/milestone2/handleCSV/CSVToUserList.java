@@ -22,10 +22,4 @@ public class CSVToUserList {
         }
         return userList;
     }
-
-//    public static ArrayList<User> returnListOfUsers(){
-//        return userList;
-//    }
-
-
 }

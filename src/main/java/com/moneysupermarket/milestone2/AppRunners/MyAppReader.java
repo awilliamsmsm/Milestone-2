@@ -1,5 +1,6 @@
 package com.moneysupermarket.milestone2.AppRunners;
 
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.moneysupermarket.milestone2.Mongo.ConnectMongoDB;
 import com.moneysupermarket.milestone2.Mongo.ReadDB;
@@ -28,6 +29,7 @@ public class MyAppReader {
             case "ReadAll":
                 userList = readDB.readAllProfiles();
                 printUsers(userList);
+                System.out.println("print");
                 break;
 
             case "CopyAddresses":

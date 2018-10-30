@@ -1,29 +1,60 @@
 package com.moneysupermarket.milestone2.Mongo;
 
+import com.moneysupermarket.milestone2.domain.User;
+import com.mongodb.BasicDBObject;
 import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
+import com.mongodb.client.*;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.junit.Assert.*;
+import java.util.List;
 
+import static org.mockito.Mockito.when;
+
+@RunWith(MockitoJUnitRunner.class)
 public class ReadDBTest {
     private ReadDB readDB;
 
-    private static final String DATABASE_NAME = "embedded";
 
     private Mongo mongo;
+    @Mock
+    private MongoCollection<BasicDBObject> mockCollection;
+    @Mock
+    private FindIterable<BasicDBObject> profiles;
+    @Mock
+    private BasicDBObject basicDBObject;
+    @Mock
+    private MongoCursor<BasicDBObject> basicDBObjectIt;
+
+    @InjectMocks
+    private ReadDB mockReader;
 
     @Before
-    public void setup() {
-        // setups mongodb test connection
-        // puts some sample records in it
-        // readDB = new ReadDb(mongoCollection);
+    public void initMocks() {
+
+        MockitoAnnotations.initMocks(this);
+        this.mockReader = new ReadDB(mockCollection);
+
+
     }
 
     @Test
     public void readAllProfiles() {
-//        result = readDB.readAllProfiles();
-//        assert values
+        when(mockCollection.find()).thenReturn(profiles);
+        when(profiles.iterator()).thenReturn(basicDBObjectIt);
+        when(basicDBObjectIt.hasNext()).thenReturn(true, false);
+        when(basicDBObjectIt.next()).thenReturn(basicDBObject);
+
+//        List<User> mockUsers =
+        mockReader.readAllProfiles();
+
+        //System.out.println(mockUsers);
     }
 
     @Test

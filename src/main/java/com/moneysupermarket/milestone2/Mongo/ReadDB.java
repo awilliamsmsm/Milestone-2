@@ -21,6 +21,7 @@ public class ReadDB {
         FindIterable<BasicDBObject> profiles = mongoCollection.find();
 
         for (BasicDBObject profile : profiles) {
+            //System.out.println(profile);
             users.add(convertToUser(profile));
         }
         return users;

@@ -14,14 +14,11 @@ public class ReadCSV {
         String file = filePath;
         try (Stream<String> stream = Files.lines(Paths.get(file)).skip(1)){
             List<String> userLines = stream.collect(Collectors.toList());
-            //CSVToUserList.stringToUser(userLines);
             return userLines;
         }
         catch(IOException e){
             e.printStackTrace();
             return null;
         }
-
     }
-
 }
